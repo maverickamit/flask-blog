@@ -13,7 +13,7 @@ posts = [
         'author': 'Sumit Ghosh',
         'title': 'Blog Post 2',
         'content': 'Second Post Content',
-        'date_posted': 'April 22,2019'
+        'date_posted': 'April 22, 2019'
     }
 ]
 
@@ -21,7 +21,7 @@ posts = [
 @app.route("/")
 @app.route("/home")
 def hello():
-    return render_template('home.html')
+    return render_template('home.html', posts=posts)
 
 
 @app.route("/about")
